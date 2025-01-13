@@ -7,12 +7,85 @@
 		<meta name="description" content="">
 		<meta name='copyright' content=''>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Lien style du Framework css Tailwind -->
 		<link href="src/output.css" rel="stylesheet">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+		<!-- Font Awesome Pour Les Icons -->
+        <script src="https://kit.fontawesome.com/35c044877d.js" crossorigin="anonymous"></script>
+
         <title>Media-Health</title>
 </head>
-<body>
-	<h1 class="text-3xl underline">
-		Hello world!
-	</h1>
+<body class="bg-gray-50">
+
+    <!-- Barre de navigation -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/logo/logo.png" alt="Logo">
+            </div>
+            <nav class="space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-800"><i class="fa-solid fa-house"></i> Accueil</a>
+                <a href="#causes" class="text-gray-600 hover:text-blue-600 transition duration-800"><i class="fa-solid fa-ribbon"></i> Causes</a>
+                <a href="#prevention" class="text-gray-600 hover:text-blue-600 transition duration-800"><i class="fa-solid fa-heart"></i> Prévention</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-800"><i class="fa-solid fa-phone"></i> Contact</a>
+            </nav>
+            <a href="#donate" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-800">Faire un don</a>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <section class="relative bg-blue-50 pt-28">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="w-full md:w-1/2 space-y-6 px-6 md:px-0">
+                <h1 class="text-4xl font-bold text-gray-800 leading-snug">
+                    Ensemble, Luttons Contre le <span class="text-blue-600">Paludisme</span> !
+                </h1>
+                <p class="text-gray-600">
+                    Informez-vous sur les causes, les traitements et les mesures de prévention du paludisme.<br>
+                    Agissons ensemble pour réduire son impact dans le monde entier.
+                </p>
+                <div class="space-x-4">
+                    <a href="#learn-more" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">En savoir plus</a>
+                    <a href="#contact" class="bg-black text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-800">Contactez-nous</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img src="assets/img/paluimage.avif" alt="Image de sensibilisation" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section des services -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Nos Objectifs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-blue-600 p-6 shadow-lg rounded-lg">
+                    <h3 class="text-lg font-semibold text-white">Éducation et Sensibilisation</h3>
+                    <p class="text-white mt-4">Informer les populations sur les moyens de prévention et les symptômes du paludisme.</p>
+                    <a href="#" class="text-white font-semibold mt-4 inline-block hover:underline">En savoir plus →</a>
+                </div>
+                <div class="bg-blue-600 p-6 shadow-lg rounded-lg">
+                    <h3 class="text-lg font-semibold text-white">Prévention</h3>
+                    <p class="text-white mt-4">Distribution de moustiquaires et promotion des pratiques de prévention.</p>
+                    <a href="#" class="text-white font-semibold mt-4 inline-block hover:underline">En savoir plus →</a>
+                </div>
+                <div class="bg-blue-600 p-6 shadow-lg rounded-lg">
+                    <h3 class="text-lg font-semibold text-white">Traitement</h3>
+                    <p class="text-white mt-4">Assurer un accès rapide aux soins médicaux pour les cas de paludisme.</p>
+                    <a href="#" class="text-white font-semibold mt-4 inline-block hover:underline">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Paludisme Info. Tous droits réservés.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
