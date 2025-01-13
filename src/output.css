@@ -659,8 +659,12 @@ video {
   inset: -0.25rem;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-\[-2px\] {
+  bottom: -2px;
+}
+
+.bottom-\[-4px\] {
+  bottom: -4px;
 }
 
 .end-1 {
@@ -673,14 +677,6 @@ video {
 
 .top-0 {
   top: 0px;
-}
-
-.bottom-\[-4px\] {
-  bottom: -4px;
-}
-
-.bottom-\[-2px\] {
-  bottom: -2px;
 }
 
 .isolate {
@@ -857,10 +853,6 @@ video {
 
 .h-0\.5 {
   height: 0.125rem;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .h-\[2px\] {
@@ -2595,16 +2587,16 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-800 {
-  transition-duration: 800ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.duration-800 {
+  transition-duration: 800ms;
 }
 
 .ease-in {
@@ -2724,10 +2716,6 @@ video {
   color: rgb(37 99 235 / var(--tw-text-opacity, 1));
 }
 
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -2744,11 +2732,6 @@ video {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
-}
-
-.active\:text-blue-600:active {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:w-full {
