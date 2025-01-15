@@ -15,13 +15,17 @@ n<!DOCTYPE html>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 		<!-- Font Awesome Pour Les Icons -->
         <script src="https://kit.fontawesome.com/35c044877d.js" crossorigin="anonymous"></script>
+		<!-- Bibliothèque pour la carte interactive -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 
         <title>Medi-Plus</title>
 </head>
 <body class="bg-gray-50">
 
     <!-- Barre de navigation -->
-    <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <header class="bg-white shadow-md fixed top-0 w-full z-10">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-3">
                 <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
@@ -32,6 +36,12 @@ n<!DOCTYPE html>
 				   class="relative  hover:text-blue-600 transition duration-800 group active text-blue-600">
 					<i class="fa-solid fa-house"></i> Accueil
 					<span class="absolute left-0 bottom-[-4px] w-full h-0.5 bg-blue-600 transition-all duration-800"></span>
+				</a>
+				<a href="#symptomes" 
+				   id="nav-symptomes"
+				   class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+				   <i class="fa-solid fa-virus"></i> Symptômes
+					<span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
 				</a>
 				<a href="#causes" 
 				   id="nav-causes"
@@ -57,65 +67,110 @@ n<!DOCTYPE html>
     </header>
 
     <!-- Section principale -->
-	
-    <section class="relative bg-white pt-28">
-        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
-            <div class="w-full md:w-1/2 space-y-6 px-6 md:px-0">
-                <h1 class="text-4xl font-bold text-gray-800 leading-snug">
-                    Ensemble, Luttons Contre le <span class="text-blue-600">Paludisme</span> !
-                </h1>
-                <p class="text-gray-600">
-                    Informez-vous sur les causes, les traitements et les mesures de prévention du paludisme.<br>
-                    Agissons ensemble pour réduire son impact dans le monde entier.
-                </p>
-                <div class="space-x-4">
-                    <a href="#learn-more" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">En savoir plus</a>
-                    <a href="#contact" class="bg-black text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-800">Contactez-nous</a>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2">
-                <img src="assets/img/jm-palu-3.jpg" alt="Image de sensibilisation" class="rounded-lg shadow-md">
+<section class="relative bg-white pt-28">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+        <div class="w-full md:w-1/2 space-y-6 px-6 md:px-0">
+            <h1 class="text-4xl font-bold text-gray-800 leading-snug">
+                Ensemble, Luttons Contre le <span class="text-blue-600">Paludisme</span> !
+            </h1>
+            <p class="text-gray-600">
+                Informez-vous sur les causes, les traitements et les mesures de prévention du paludisme.<br>
+                Agissons ensemble pour réduire son impact en Côte d'Ivoire.
+            </p>
+            <div class="space-x-4">
+                <a href="https://www.pnlpcotedivoire.org/paludisme-generalites/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">En savoir plus</a>
+                <a href="#contact" class="bg-black text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-800">Contactez-nous</a>
             </div>
         </div>
-    </section>
+        <div class="w-full md:w-1/2">
+            <img src="assets/img/jm-palu-3.jpg" alt="Image de sensibilisation" class="rounded-lg shadow-md mb-6"> <!-- Ajout de la marge inférieure -->
+        </div>
+    </div>
+</section>
+
 	
-    <!-- Section des services -->
-    <section class="py-16 bg-gray-100">
-		<div class="container mx-auto text-center">
-			<h2 class="text-2xl font-bold text-blue-800 mb-6">Historique de la Lutte contre le Paludisme</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2019-2020</h3>
-					<p class="text-white mt-4">Élaboration du PSN 2021-2025, préparation de la 4e campagne nationale de distribution de MILDA, mise en œuvre de la PID dans deux sites pilotes (Sakassou et Nassian), et organisation du 1er cours national de paludologie (25 cadres formés).</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2017-2018</h3>
-					<p class="text-white mt-4">3e campagne nationale de distribution de MILDA, adoption des nouvelles directives nationales avec introduction de deux nouvelles CTA (Pipéraquine et Pyronaridine + Artésunate) pour le traitement du paludisme simple.</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2015</h3>
-					<p class="text-white mt-4">Signature de la subvention NFM 2015-2017 pour intensifier la lutte contre le paludisme.</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2013</h3>
-					<p class="text-white mt-4">Révision de la politique nationale avec adoption de l’algorithme d’utilisation des outils de diagnostic et introduction de l’artésunate injectable pour le traitement du paludisme grave.</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2010</h3>
-					<p class="text-white mt-4">Lancement de la 1ère campagne nationale de distribution de MILDA aux ménages et signature de la subvention Fonds mondial round 8.</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">2005</h3>
-					<p class="text-white mt-4">Adoption de la nouvelle politique nationale incluant les CTA et le TPI/SP pour la prévention chez les femmes enceintes.</p>
-				</div>
-				<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
-					<h3 class="text-lg font-semibold text-white">1996</h3>
-					<p class="text-white mt-4">Création du Programme National de Lutte contre le Paludisme (PNLP) et inscription de la lutte antipaludique au tableau des maladies prioritaires.</p>
+<!-- Vidéo sur le paludisme -->
+<section class="py-16 bg-gray-100">
+			<div class="container mx-auto text-center">
+				<h2 class="text-2xl font-bold text-blue-800 mb-6">Galerie de Médias</h2>
+				<p class="text-lg text-gray-600 mb-6">Découvrez notre vidéo sur la lutte contre le paludisme.</p>
+				
+				<div class="flex justify-center">
+					<div class="w-full max-w-7xl"> <!-- Augmenter la largeur max -->
+						<div class="relative pb-[56.25%] overflow-hidden rounded-lg shadow-lg">
+							<iframe class="absolute top-0 left-0 w-full h-full"
+								src="https://www.youtube.com/embed/00ath_VlQhY?si=6OwhH7mQDbC05mOY" 
+								title="YouTube video player" 
+								frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+								referrerpolicy="strict-origin-when-cross-origin" 
+								allowfullscreen>
+							</iframe>
+						</div>
+					</div>
 				</div>
 			</div>
+</section>
+
+<!-- Section des services -->
+<section class="py-16 bg-gray-100">
+	<div class="container mx-auto text-center">
+		<h2 class="text-2xl font-bold text-blue-800 mb-6">Historique de la Lutte contre le Paludisme</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">2019-2020</h3>
+				<p class="text-white mt-4">Élaboration du PSN 2021-2025, préparation de la 4e campagne nationale de distribution de MILDA, mise en œuvre de la PID dans deux sites pilotes (Sakassou et Nassian), et organisation du 1er cours national de paludologie (25 cadres formés).</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">2017-2018</h3>
+				<p class="text-white mt-4">3e campagne nationale de distribution de MILDA, adoption des nouvelles directives nationales avec introduction de deux nouvelles CTA (Pipéraquine et Pyronaridine + Artésunate) pour le traitement du paludisme simple.</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">2015</h3>
+				<p class="text-white mt-4">Signature de la subvention NFM 2015-2017 pour intensifier la lutte contre le paludisme.</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">2013</h3>
+				<p class="text-white mt-4">Révision de la politique nationale avec adoption de l’algorithme d’utilisation des outils de diagnostic et introduction de l’artésunate injectable pour le traitement du paludisme grave.</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">2010</h3>
+				<p class="text-white mt-4">Lancement de la 1ère campagne nationale de distribution de MILDA aux ménages et signature de la subvention Fonds mondial round 8.</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+				<h3 class="text-lg font-semibold text-white">1996-2005</h3>
+				<p class="text-white mt-4">Création du Programme National de Lutte contre le Paludisme (PNLP) et inscription de la lutte antipaludique au tableau des maladies prioritaires.</p>
+				<p class="text-white mt-4">Adoption de la nouvelle politique nationale incluant les CTA et le TPI/SP pour la prévention chez les femmes enceintes.</p>
+				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
+					En savoir plus →
+					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+				</a>
+			</div>	
 		</div>
-	</section>
-	<!-- Section des Symptômes et Signes -->
+	</div>
+</section>
+
+<!-- Section des Symptômes et Signes -->
 <section id="symptomes" class="py-16 bg-white">
     <div class="container mx-auto text-center">
         <h2 class="text-3xl font-bold text-blue-800 mb-8">Symptômes et Signes du Paludisme</h2>
@@ -156,22 +211,247 @@ n<!DOCTYPE html>
             </div>
         </div>
         <div class="mt-12">
-            <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">Contactez un médecin</a>
+            <a href="https://www.pnlpcotedivoire.org/contact/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">Contactez le PNLPC</a>
         </div>
     </div>
 </section>
 
-	
-	
-	
-	
+<!-- Section des Causes -->
+<section id="causes" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8">Les Causes du Paludisme</h2>
+		<img src="assets/img/section-img.png" alt="" class="mx-auto">
+        <p class="text-gray-600 mb-12">
+            Le paludisme est causé par des parasites du genre *Plasmodium*, qui sont transmis à l'homme par la piqûre de moustiques infectés du genre *Anopheles*. Découvrez les principales causes de cette maladie.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cause 1 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-bug text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Les moustiques *Anopheles*</h3>
+                <p class="text-gray-600 mt-4">
+                    Le paludisme est principalement transmis par la piqûre de moustiques *Anopheles* femelles infectés. Ils sont les vecteurs de la maladie.
+                </p>
+            </div>
+            <!-- Cause 2 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-droplet text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">L'eau stagnante</h3>
+                <p class="text-gray-600 mt-4">
+                    Les moustiques *Anopheles* se reproduisent dans l'eau stagnante, notamment dans les marécages, les fossés et les réservoirs d'eau non protégés.
+                </p>
+            </div>
+            <!-- Cause 3 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-people-carry text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Les voyages dans les zones à risque</h3>
+                <p class="text-gray-600 mt-4">
+                    Les voyageurs venant de régions endémiques peuvent introduire des parasites dans des zones non affectées, contribuant à la propagation du paludisme.
+                </p>
+            </div>
+            <!-- Cause 4 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-virus text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">La résistance aux médicaments</h3>
+                <p class="text-gray-600 mt-4">
+                    La résistance aux médicaments antipaludiques, notamment à l'artémisinine, est un problème majeur dans certains pays, compliquant le traitement de la maladie.
+                </p>
+            </div>
+            <!-- Cause 5 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-house-damage text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Les conditions de vie précaires</h3>
+                <p class="text-gray-600 mt-4">
+                    Les populations vivant dans des conditions sanitaires précaires et dans des zones où l'accès aux soins de santé est limité sont plus vulnérables au paludisme.
+                </p>
+            </div>
+            <!-- Cause 6 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-infinity text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Le climat</h3>
+                <p class="text-gray-600 mt-4">
+                    Les zones tropicales et subtropicales, où les températures sont élevées et l'humidité est élevée, sont idéales pour la reproduction des moustiques *Anopheles*.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Pied de page -->
-    <footer class="bg-gray-800 text-white py-8">
+<!-- Section de la Prévention -->
+<section id="prevention" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8">La Prévention du Paludisme en Côte d'Ivoire</h2>
+        <img src="assets/img/section-img.png" alt="" class="mx-auto">
+        <p class="text-gray-600 mb-12">
+            La prévention du paludisme repose sur plusieurs stratégies visant à lutter contre les vecteurs et à protéger la population contre les risques d'infection.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Lutte anti vectorielle -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-bug text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Lutte anti vectorielle</h3>
+                <p class="text-gray-600 mt-4">
+                    Le maintien et le renforcement des stratégies de lutte contre les moustiques *Anopheles* à travers des moyens comme la distribution de moustiquaires imprégnées et la pulvérisation intra-domiciliaire.
+                </p>
+            </div>
+            <!-- Chimio prévention -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-pills text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Chimio prévention</h3>
+                <p class="text-gray-600 mt-4">
+                    L'utilisation de traitements préventifs, comme le Traitement Préventif Intermittent (TPI), pour les femmes enceintes et les nourrissons afin de réduire le risque de paludisme.
+                </p>
+            </div>
+            <!-- Sensibilisation -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-bullhorn text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Sensibilisation</h3>
+                <p class="text-gray-600 mt-4">
+                    Renforcement des campagnes de sensibilisation sur l'importance de l'utilisation des moustiquaires et des soins prénatals pour les femmes enceintes.
+                </p>
+            </div>
+            <!-- Distribution de moustiquaires -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-network-wired text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Distribution de moustiquaires</h3>
+                <p class="text-gray-600 mt-4">
+                    Mise en œuvre de la distribution de moustiquaires imprégnées d’insecticide à longue durée d'action (MILDA) pour couvrir toute la population, y compris les enfants et les femmes enceintes.
+                </p>
+            </div>
+            <!-- Traitement préventif chez les nourrissons -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-baby-carriage text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Traitement préventif chez les nourrissons</h3>
+                <p class="text-gray-600 mt-4">
+                    Mise en œuvre pilote du Traitement Préventif Intermittent chez les nourrissons pour prévenir le paludisme dès leur jeune âge.
+                </p>
+            </div>
+            <!-- Engagement communautaire -->
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-users text-4xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-800">Engagement communautaire</h3>
+                <p class="text-gray-600 mt-4">
+                    Encourager l'engagement des collectivités locales dans des actions de prévention et de sensibilisation pour lutter efficacement contre le paludisme.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section pour la map interractive -->
+<section id="map-section" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8">Carte Interactive des Régions de la Côte d'Ivoire</h2>
+        <div id="map" style="height: 600px; width: 100%;"></div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 Paludisme Info. Tous droits réservés.</p>
         </div>
-    </footer>
-
+</footer>
 </body>
+
+<script>
+    // Coordonnées du centre de la Côte d'Ivoire
+    var map = L.map('map').setView([7.539989, -5.547080], 6);  // Centre de la Côte d'Ivoire
+
+    // Limites géographiques de la Côte d'Ivoire (bounding box)
+    var bounds = [
+        [4.5, -7.5],  // Sud-Ouest
+        [11.5, -2.5]  // Nord-Est
+    ];
+
+    // Ajout d'un fond de carte (ici OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Appliquer les limites à la carte (empêcher de se déplacer au-delà des frontières)
+    map.setMaxBounds(bounds);
+
+    // Liste des zones affectées par le paludisme avec des informations
+    var malariaZones = [
+        {
+            name: "Zone Sud",
+            lat: 5.000000,
+            lon: -4.000000,
+            incidenceRate: "10%",
+            mortalityRate: "2%",
+            population: "500,000",
+            details: "Zone avec transmission quasi toute l'année, endémique. Forte incidence.",
+            color: "green"  // Couleur en fonction de l'incidence
+        },
+        {
+            name: "Zone Nord",
+            lat: 10.000000,
+            lon: -5.500000,
+            incidenceRate: "15%",
+            mortalityRate: "1.5%",
+            population: "700,000",
+            details: "Transmission pendant la saison des pluies. Climat favorable à la prolifération des moustiques.",
+            color: "orange"  // Couleur pour une incidence plus élevée
+        },
+        {
+            name: "Zone Centre",
+            lat: 7.500000,
+            lon: -5.000000,
+            incidenceRate: "12%",
+            mortalityRate: "1.2%",
+            population: "600,000",
+            details: "Endémique, transmission plus courte, mais fortement affectée.",
+            color: "yellow"  // Couleur modérée
+        },
+        {
+            name: "Zone Est",
+            lat: 7.000000,
+            lon: -3.500000,
+            incidenceRate: "13%",
+            mortalityRate: "1.3%",
+            population: "650,000",
+            details: "Zone où la déforestation a accentué la propagation du paludisme.",
+            color: "red"  // Zone très touchée, couleur rouge
+        }
+        // Ajouter d'autres zones avec leurs informations ici
+    ];
+
+    // Ajouter un marqueur et un polygone pour chaque zone affectée par le paludisme
+    malariaZones.forEach(function(zone) {
+        var popupContent = `
+            <b>${zone.name}</b><br>
+            Taux d'incidence : ${zone.incidenceRate}<br>
+            Taux de mortalité : ${zone.mortalityRate}<br>
+            Population touchée : ${zone.population}<br>
+            Détails : ${zone.details}
+        `;
+        
+        // Définir des coordonnées approximatives pour un polygone représentant la zone
+        var zoneCoords = [
+            [zone.lat + 0.5, zone.lon - 0.5],
+            [zone.lat + 0.5, zone.lon + 0.5],
+            [zone.lat - 0.5, zone.lon + 0.5],
+            [zone.lat - 0.5, zone.lon - 0.5]
+        ];
+
+        // Ajouter le polygone à la carte avec une couleur spécifique
+        L.polygon(zoneCoords, {
+            color: 'black',
+            weight: 2,
+            fillColor: zone.color,  // Couleur dynamique
+            fillOpacity: 0.5
+        }).addTo(map);
+
+        // Ajouter un marqueur au centre de la zone
+        L.marker([zone.lat, zone.lon]).addTo(map)
+            .bindPopup(popupContent);
+    });
+
+    // Empêcher le zoom arrière après un certain niveau
+    map.on('drag', function() {
+        map.panInsideBounds(bounds);
+    });
+</script>
+
 </html>
