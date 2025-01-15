@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon -->
+        <link rel="icon" href="assets/img/favicon.png">
+		<!-- Lien style du Framework css Tailwind -->
+		<link href="src/output.css" rel="stylesheet">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+		<!-- Font Awesome Pour Les Icons -->
+        <script src="https://kit.fontawesome.com/35c044877d.js" crossorigin="anonymous"></script>
+		<!-- Bibliothèque pour la carte interactive -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		<!-- Bibliothèque pour effet animation -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialisation de la bibliothèque AOS
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Barre de navigation -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-10" >
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="space-x-6">
+                <a href="index.html" id="nav-accueil" class="relative hover:text-blue-600 transition duration-800 group active text-blue-600">
+                    <i class="fa-solid fa-house"></i> Accueil
+                </a>
+                <a href="#index#symptomes" id="nav-symptomes" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-virus"></i> Symptômes
+                </a>
+                <a href="#causes" id="nav-causes" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-ribbon"></i> Causes
+                </a>
+                <a href="#prevention" id="nav-prevention" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-heart"></i> Prévention
+                </a>
+                <a href="#contact" id="nav-contact" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-phone"></i> Contact
+                </a>
+            </nav>
+            <a href="#donate" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700">Faire un don</a>
+        </div>
+    </header>
+
+    <!-- Section Faire un Don -->
+    <section id="donate" class="mt-20 py-16 bg-gray-400 text-white" >
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-6">Contribuez à Notre Cause</h1>
+            <p class="text-lg mb-10">Votre soutien peut faire une réelle différence dans la vie de nombreuses personnes. Merci pour votre générosité.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">Don Unique</h2>
+                    <p class="mb-6">Faites un don ponctuel et aidez-nous à atteindre nos objectifs.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">Faire un don</button>
+                </div>
+
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">Don Mensuel</h2>
+                    <p class="mb-6">Soutenez-nous régulièrement avec un don mensuel.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">S'abonner</button>
+                </div>
+
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-4">Don Personnalisé</h2>
+                    <p class="mb-6">Choisissez le montant et la fréquence de votre soutien.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">Personnaliser</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Votre Organisation. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

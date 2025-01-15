@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
 }
-

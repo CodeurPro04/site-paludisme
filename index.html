@@ -1,4 +1,4 @@
-n<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr-FR">
 <head>
         <meta charset="utf-8">
@@ -18,15 +18,16 @@ n<!DOCTYPE html>
 		<!-- Bibliothèque pour la carte interactive -->
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-
+		<!-- Bibliothèque pour effet animation -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>Medi-Plus</title>
 </head>
 <body class="bg-gray-50">
 
     <!-- Barre de navigation -->
-    <header class="bg-white shadow-md fixed top-0 w-full z-10">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <header class="bg-white shadow-md fixed top-0 w-full z-10 " data-aos="fade-down" data-aos-duration="1000">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6 ">
             <div class="flex items-center space-x-3">
                 <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
             </div>
@@ -62,27 +63,28 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
 				</a>
 			</nav>					
-            <a href="#donate" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700">Faire un don</a>
+            <a href="don.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700">Faire un don</a>
         </div>
+
     </header>
 
     <!-- Section principale -->
 <section class="relative bg-white pt-28">
     <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
-        <div class="w-full md:w-1/2 space-y-6 px-6 md:px-0">
-            <h1 class="text-4xl font-bold text-gray-800 leading-snug">
+        <div class="w-full md:w-1/2 space-y-6 px-6 md:px-0" >
+            <h1 class="text-4xl font-bold text-gray-800 leading-snug" data-aos="fade-down" data-aos-duration="1000">
                 Ensemble, Luttons Contre le <span class="text-blue-600">Paludisme</span> !
             </h1>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-aos="fade-down" data-aos-duration="1000">
                 Informez-vous sur les causes, les traitements et les mesures de prévention du paludisme.<br>
                 Agissons ensemble pour réduire son impact en Côte d'Ivoire.
             </p>
-            <div class="space-x-4">
+            <div class="space-x-4" data-aos="fade-up" data-aos-duration="1000">
                 <a href="https://www.pnlpcotedivoire.org/paludisme-generalites/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">En savoir plus</a>
                 <a href="#contact" class="bg-black text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-800">Contactez-nous</a>
             </div>
         </div>
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
             <img src="assets/img/jm-palu-3.jpg" alt="Image de sensibilisation" class="rounded-lg shadow-md mb-6"> <!-- Ajout de la marge inférieure -->
         </div>
     </div>
@@ -90,7 +92,7 @@ n<!DOCTYPE html>
 
 	
 <!-- Vidéo sur le paludisme -->
-<section class="py-16 bg-gray-100">
+<section class="py-16 bg-gray-100" data-aos="fade-up" data-aos-duration="1000">
 			<div class="container mx-auto text-center">
 				<h2 class="text-2xl font-bold text-blue-800 mb-6">Galerie de Médias</h2>
 				<p class="text-lg text-gray-600 mb-6">Découvrez notre vidéo sur la lutte contre le paludisme.</p>
@@ -113,11 +115,11 @@ n<!DOCTYPE html>
 </section>
 
 <!-- Section des services -->
-<section class="py-16 bg-gray-100">
+<section class="py-16 bg-gray-100" >
 	<div class="container mx-auto text-center">
-		<h2 class="text-2xl font-bold text-blue-800 mb-6">Historique de la Lutte contre le Paludisme</h2>
+		<h2 class="text-2xl font-bold text-blue-800 mb-6" data-aos="fade-up" data-aos-duration="1000">Historique de la Lutte contre le Paludisme</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">2019-2020</h3>
 				<p class="text-white mt-4">Élaboration du PSN 2021-2025, préparation de la 4e campagne nationale de distribution de MILDA, mise en œuvre de la PID dans deux sites pilotes (Sakassou et Nassian), et organisation du 1er cours national de paludologie (25 cadres formés).</p>
 				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
@@ -125,7 +127,7 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
 				</a>
 			</div>
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">2017-2018</h3>
 				<p class="text-white mt-4">3e campagne nationale de distribution de MILDA, adoption des nouvelles directives nationales avec introduction de deux nouvelles CTA (Pipéraquine et Pyronaridine + Artésunate) pour le traitement du paludisme simple.</p>
 				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
@@ -133,7 +135,7 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
 				</a>
 			</div>
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">2015</h3>
 				<p class="text-white mt-4">Signature de la subvention NFM 2015-2017 pour intensifier la lutte contre le paludisme.</p>
 				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
@@ -141,7 +143,7 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
 				</a>
 			</div>
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">2013</h3>
 				<p class="text-white mt-4">Révision de la politique nationale avec adoption de l’algorithme d’utilisation des outils de diagnostic et introduction de l’artésunate injectable pour le traitement du paludisme grave.</p>
 				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
@@ -149,7 +151,7 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
 				</a>
 			</div>
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">2010</h3>
 				<p class="text-white mt-4">Lancement de la 1ère campagne nationale de distribution de MILDA aux ménages et signature de la subvention Fonds mondial round 8.</p>
 				<a href="https://www.pnlpcotedivoire.org/historique-de-la-lutte-contre-le-paludisme/" class="relative text-white font-semibold mt-4 inline-block group">
@@ -157,7 +159,7 @@ n<!DOCTYPE html>
 					<span class="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
 				</a>
 			</div>
-			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50">
+			<div class="bg-blue-600 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/50" data-aos="fade-up" data-aos-duration="1000">
 				<h3 class="text-lg font-semibold text-white">1996-2005</h3>
 				<p class="text-white mt-4">Création du Programme National de Lutte contre le Paludisme (PNLP) et inscription de la lutte antipaludique au tableau des maladies prioritaires.</p>
 				<p class="text-white mt-4">Adoption de la nouvelle politique nationale incluant les CTA et le TPI/SP pour la prévention chez les femmes enceintes.</p>
@@ -173,45 +175,45 @@ n<!DOCTYPE html>
 <!-- Section des Symptômes et Signes -->
 <section id="symptomes" class="py-16 bg-white">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-800 mb-8">Symptômes et Signes du Paludisme</h2>
-		<img src="assets/img/section-img.png" alt="" class="mx-auto">
-        <p class="text-gray-600 mb-12">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8" data-aos="fade-up" data-aos-duration="1000">Symptômes et Signes du Paludisme</h2>
+		<img src="assets/img/section-img.png" alt="" class="mx-auto" data-aos="fade-up" data-aos-duration="1000">
+        <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-duration="1000">
             Le paludisme peut se manifester par divers symptômes qui nécessitent une prise en charge immédiate pour éviter les complications graves. Voici les signes les plus courants :
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-temperature-full text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Fièvre élevée</h3>
                 <p class="text-gray-600 mt-4">Une fièvre soudaine et persistante est l'un des premiers signes du paludisme.</p>
             </div>
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-head-side-virus text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Maux de tête</h3>
                 <p class="text-gray-600 mt-4">Les maux de tête intenses et récurrents sont fréquents chez les personnes atteintes.</p>
             </div>
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-head-side-cough text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Nausées et vomissements</h3>
                 <p class="text-gray-600 mt-4">Les troubles gastro-intestinaux tels que nausées et vomissements peuvent survenir.</p>
             </div>
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-dizzy text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Fatigue et faiblesse</h3>
                 <p class="text-gray-600 mt-4">Un sentiment de fatigue intense et de faiblesse est un symptôme courant.</p>
             </div>
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-lungs text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Essoufflement</h3>
                 <p class="text-gray-600 mt-4">Des difficultés respiratoires peuvent indiquer une forme grave de paludisme.</p>
             </div>
-            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-gray-100 p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000" >
                 <i class="fa-solid fa-thermometer-half text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Frissons et sueurs</h3>
                 <p class="text-gray-600 mt-4">Des frissons suivis de sueurs abondantes sont des signes distinctifs.</p>
             </div>
         </div>
         <div class="mt-12">
-            <a href="https://www.pnlpcotedivoire.org/contact/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800">Contactez le PNLPC</a>
+            <a href="https://www.pnlpcotedivoire.org/contact/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-black transition duration-800" data-aos="fade-up" data-aos-duration="1000">Contactez le PNLPC</a>
         </div>
     </div>
 </section>
@@ -219,14 +221,14 @@ n<!DOCTYPE html>
 <!-- Section des Causes -->
 <section id="causes" class="py-16 bg-gray-100">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-800 mb-8">Les Causes du Paludisme</h2>
-		<img src="assets/img/section-img.png" alt="" class="mx-auto">
-        <p class="text-gray-600 mb-12">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8" data-aos="fade-up" data-aos-duration="1000">Les Causes du Paludisme</h2>
+		<img src="assets/img/section-img.png" alt="" class="mx-auto" data-aos="fade-up" data-aos-duration="1000">
+        <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-duration="1000">
             Le paludisme est causé par des parasites du genre *Plasmodium*, qui sont transmis à l'homme par la piqûre de moustiques infectés du genre *Anopheles*. Découvrez les principales causes de cette maladie.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Cause 1 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-bug text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Les moustiques *Anopheles*</h3>
                 <p class="text-gray-600 mt-4">
@@ -234,7 +236,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Cause 2 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-droplet text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">L'eau stagnante</h3>
                 <p class="text-gray-600 mt-4">
@@ -242,7 +244,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Cause 3 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-people-carry text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Les voyages dans les zones à risque</h3>
                 <p class="text-gray-600 mt-4">
@@ -250,7 +252,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Cause 4 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-virus text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">La résistance aux médicaments</h3>
                 <p class="text-gray-600 mt-4">
@@ -258,7 +260,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Cause 5 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-house-damage text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Les conditions de vie précaires</h3>
                 <p class="text-gray-600 mt-4">
@@ -266,7 +268,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Cause 6 -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-infinity text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Le climat</h3>
                 <p class="text-gray-600 mt-4">
@@ -280,14 +282,14 @@ n<!DOCTYPE html>
 <!-- Section de la Prévention -->
 <section id="prevention" class="py-16 bg-gray-100">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-800 mb-8">La Prévention du Paludisme en Côte d'Ivoire</h2>
-        <img src="assets/img/section-img.png" alt="" class="mx-auto">
-        <p class="text-gray-600 mb-12">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8" data-aos="fade-up" data-aos-duration="1000" >La Prévention du Paludisme en Côte d'Ivoire</h2>
+        <img src="assets/img/section-img.png" alt="" class="mx-auto" data-aos="fade-up" data-aos-duration="1000">
+        <p class="text-gray-600 mb-12" data-aos="fade-up" data-aos-duration="1000">
             La prévention du paludisme repose sur plusieurs stratégies visant à lutter contre les vecteurs et à protéger la population contre les risques d'infection.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Lutte anti vectorielle -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-bug text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Lutte anti vectorielle</h3>
                 <p class="text-gray-600 mt-4">
@@ -295,7 +297,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Chimio prévention -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-pills text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Chimio prévention</h3>
                 <p class="text-gray-600 mt-4">
@@ -303,7 +305,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Sensibilisation -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-bullhorn text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Sensibilisation</h3>
                 <p class="text-gray-600 mt-4">
@@ -311,7 +313,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Distribution de moustiquaires -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-network-wired text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Distribution de moustiquaires</h3>
                 <p class="text-gray-600 mt-4">
@@ -319,7 +321,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Traitement préventif chez les nourrissons -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-baby-carriage text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Traitement préventif chez les nourrissons</h3>
                 <p class="text-gray-600 mt-4">
@@ -327,7 +329,7 @@ n<!DOCTYPE html>
                 </p>
             </div>
             <!-- Engagement communautaire -->
-            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="bg-white p-6 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                 <i class="fa-solid fa-users text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-gray-800">Engagement communautaire</h3>
                 <p class="text-gray-600 mt-4">
@@ -338,10 +340,49 @@ n<!DOCTYPE html>
     </div>
 </section>
 
+<!-- Section Contact -->
+<section id="contact" class="bg-gray-100 py-16" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-3xl font-bold text-blue-800 text-center mb-6">Contactez-nous</h2>
+        <p class="text-lg text-gray-600 text-center mb-12">
+            Avez-vous des questions ou des préoccupations ? Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.
+        </p>
+        <div class="flex flex-wrap justify-center">
+            <div class="w-full lg:w-2/3">
+                <form action="contact_handler.php" method="POST" class="bg-white rounded-lg shadow-lg p-6 space-y-6">
+                    <div class="flex flex-col space-y-2">
+                        <label for="name" class="text-gray-700 font-medium">Nom complet</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="email" class="text-gray-700 font-medium">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Votre adresse e-mail" required>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="message" class="text-gray-700 font-medium">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-12 text-center">
+            <p class="text-gray-700">Ou contactez-nous directement :</p>
+            <p class="text-blue-600 font-medium">supportcontact@mediplus.com</p>
+            <p class="text-gray-700">Téléphone : +225 27 22 47 02 12</p>
+        </div>
+    </div>
+</section>
+
+
 <!-- Section pour la map interractive -->
 <section id="map-section" class="py-16 bg-gray-100">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-800 mb-8">Carte Interactive des Régions de la Côte d'Ivoire</h2>
+        <h2 class="text-3xl font-bold text-blue-800 mb-8">Carte interactive des régions de la Côte d'Ivoire affectées par le paludisme</h2>
         <div id="map" style="height: 600px; width: 100%;"></div>
     </div>
 </section>
@@ -352,6 +393,9 @@ n<!DOCTYPE html>
             <p>&copy; 2025 Paludisme Info. Tous droits réservés.</p>
         </div>
 </footer>
+<script>
+	AOS.init();//Ici c'est un script qu'on dois initialiser pour l'effet AOS
+</script>
 </body>
 
 <script>
