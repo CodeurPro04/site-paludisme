@@ -1,4 +1,5 @@
-AOS.init();//Ici c'est un script qu'on dois initialiser pour l'effet AOS
+
+    AOS.init();//Ici c'est un script qu'on dois initialiser pour l'effet AOS
 
     // Coordonnées du centre de la Côte d'Ivoire
     var map = L.map('map').setView([7.539989, -5.547080], 6);  // Centre de la Côte d'Ivoire
