@@ -11,6 +11,8 @@
         <link rel="icon" href="assets/img/favicon.png">
 		<!-- Lien style du Framework css Tailwind -->
 		<link href="src/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/forme.css">
+        <link rel="stylesheet" href="style/style.css">
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 		<!-- Font Awesome Pour Les Icons -->
@@ -24,6 +26,21 @@
         <title>Medi-Plus</title>
 </head>
 <body class="bg-gray-50">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
 
     <!-- Barre de navigation -->
     <header class="bg-white shadow-md fixed top-0 w-full z-10 " data-aos="fade-down" data-aos-duration="1000">
@@ -60,6 +77,12 @@
 				   id="nav-contact"
 				   class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
 					<i class="fa-solid fa-phone"></i> Contact
+					<span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+				</a>
+                <a href="#teams" 
+				   id="nav-contact"
+				   class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
+                   <i class="fa-solid fa-people-group"></i> Teams
 					<span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
 				</a>
 			</nav>					
@@ -388,11 +411,58 @@
 </section>
 
 <!-- Pied de page -->
-<footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 Paludisme Info. Tous droits réservés.</p>
+<footer id="footer" class="bg-gray-800 text-white py-8 flex">
+    <div class="footer-main">
+     <div class="container">
+       <div class="row">
+       <div class="bg-gray-800 text-white py-8 " >
+           <h3 class="coordonées" >Nos coordonées</h3>
+                       <p><strong><i class="fa fa-map-marker"></i> </strong> Cocody Riviera Palmeraie près de la cité SYNINFO: Côte d'Ivoire</p>
+                                    <p><strong><i class="fa fa-phone"></i> Téléphone: </strong> 27 22 47 02 12</p>
+                                    <p><strong><i class="fa fa-envelope"></i> Email: </strong> pnlp_rci@yahoo.fr</p>
+                   
+          
+                 
+ <div class="bg-gray-800 text-white py-8 Localisation ">
+           <h3 class="menu">Liens utiles</h3>
+           <ul class="list-arrow">
+             <li><a href="index.html#">Acceuil</a></li>
+             <li><a href="index.html#Symptôme">Symptôme</a></li>
+             <li><a href="index.html#Causes">Causes</a></li>
+             <li><a href="index.html#Préventions">Préventions</a></li>
+             <li><a href="index.html#Contact">Contact</a></li>
+           </ul>
+         </div>
+   
+
+
+         <div class="bg-gray-800 text-white py-8">
+           <h3 class="map-container">Localisation</h3>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1147.351674940148!2d-3.9635128730051115!3d5.371251138090875!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc377f22ff357f9e!2sPNLP%20CI!5e0!3m2!1sfr!2sci!4v1582565180402!5m2!1sfr!2sci" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         </div>
+
+         
+       </div>
+
+     </div>
+
+    </div>
+    <!-- Footer  -->
+   
+  
+   <hr>
+         <div class="bg-gray-800 text-white py-8">
+             <div class="fin">
+            <p>© 2025 Paludisme Info. Tous droits réservés.</p>
         </div>
-</footer>
+        
+       </div>
+    
+
+ </footer>
+
+
+
 <script>
 	AOS.init();//Ici c'est un script qu'on dois initialiser pour l'effet AOS
 </script>
@@ -426,7 +496,7 @@
             mortalityRate: "2%",
             population: "500,000",
             details: "Zone avec transmission quasi toute l'année, endémique. Forte incidence.",
-            color: "green"  // Couleur en fonction de l'incidence
+            color: "green" 
         },
         {
             name: "Zone Nord",
@@ -436,7 +506,7 @@
             mortalityRate: "1.5%",
             population: "700,000",
             details: "Transmission pendant la saison des pluies. Climat favorable à la prolifération des moustiques.",
-            color: "orange"  // Couleur pour une incidence plus élevée
+            color: "orange" 
         },
         {
             name: "Zone Centre",
@@ -446,7 +516,7 @@
             mortalityRate: "1.2%",
             population: "600,000",
             details: "Endémique, transmission plus courte, mais fortement affectée.",
-            color: "yellow"  // Couleur modérée
+            color: "yellow" 
         },
         {
             name: "Zone Est",
@@ -456,7 +526,7 @@
             mortalityRate: "1.3%",
             population: "650,000",
             details: "Zone où la déforestation a accentué la propagation du paludisme.",
-            color: "red"  // Zone très touchée, couleur rouge
+            color: "red" 
         }
         // Ajouter d'autres zones avec leurs informations ici
     ];
@@ -483,7 +553,7 @@
         L.polygon(zoneCoords, {
             color: 'black',
             weight: 2,
-            fillColor: zone.color,  // Couleur dynamique
+            fillColor: zone.color, 
             fillOpacity: 0.5
         }).addTo(map);
 
@@ -497,5 +567,17 @@
         map.panInsideBounds(bounds);
     });
 </script>
+<script>
+    // ici c'est pour masquer le prechargement
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  setTimeout(() => {
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 500); 
+  }, 100); 
+});
+  </script>
 
 </html>

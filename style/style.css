@@ -1,0 +1,100 @@
+/* style pour le prechargement */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #007bff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  position: relative;
+  width: 110px;
+  height: 110px; 
+}
+
+.loader-outter,
+.loader-inner {
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 50%;
+  animation: spin 2s linear infinite; 
+}
+
+.loader-outter {
+  width: 110px; 
+  height: 110px; 
+  border-left-color: transparent; 
+  animation-direction: reverse;
+}
+
+.loader-inner {
+  width: 70px; 
+  height: 70px; 
+  border-right-color: transparent; 
+  animation-duration: 1.5s; 
+  top: 20px; 
+  left: 20px; 
+}
+
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.indicator svg {
+  stroke: white;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+}
+
+#back {
+  opacity: 0.2;
+}
+
+#front {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: dash 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 60;
+  }
+  100% {
+    stroke-dashoffset: 120;
+  }
+}
+
+/* Content styles */
+.content {
+  display: none;
+  text-align: center;
+  padding: 50px;
+}
+
+body.loaded .content {
+  display: block;
+}
