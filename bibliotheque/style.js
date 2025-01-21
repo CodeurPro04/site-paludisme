@@ -199,3 +199,24 @@
             defaultSpan.classList.remove('w-0');
         }
     });
+
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Nombre de logos visibles en même temps
+        spaceBetween: 20, // Espacement entre les logos
+        loop: true, // Carousel infini
+        grabCursor: true, // Curseur en forme de main
+        mousewheel: true, // Glissement avec la molette de la souris
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    

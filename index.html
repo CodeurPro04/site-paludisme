@@ -22,6 +22,11 @@
 		<!-- Bibliothèque pour effet animation -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
         <title>Medi-Plus | Côte d'Ivoire</title>
 </head>
 <body class="bg-gray-50" >
@@ -323,7 +328,7 @@
 
 
 <!-- Section de la Prévention -->
-<section id="prevention" class="py-16 bg-gray-100">
+<section id="prevention" class="py-16 bg-white">
     <div class="container mx-auto text-center px-4">
         <h2 class="text-3xl font-bold text-blue-800 mb-8" data-aos="fade-up" data-aos-duration="1000">
             La Prévention du Paludisme en Côte d'Ivoire
@@ -390,6 +395,7 @@
 <section id="contact" class="bg-gray-100 py-16" data-aos="zoom-in" data-aos-duration="1000">
     <div class="container mx-auto px-6 lg:px-20">
         <h2 class="text-3xl font-bold text-blue-800 text-center mb-6">Contactez-nous</h2>
+        <img src="assets/img/section-img.png" alt="" class="mx-auto" data-aos="fade-up" data-aos-duration="1000">
         <p class="text-lg text-gray-600 text-center mb-12">
             Avez-vous des questions ou des préoccupations ? Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.
         </p>
@@ -424,6 +430,33 @@
     </div>
 </section>
 
+<!-- Section Partenaires -->
+<section class="partners-section py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container mx-auto text-center">
+        <h2 class="text-blue-800 text-3xl font-bold mb-8">Nos Partenaires</h2>
+        <img src="assets/img/section-img.png" alt="" class="mx-auto mb-8">
+        <div class="swiper-container">
+            <!-- Wrapper for slides -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://www.unicef.org/fr"><img src="assets/img/UNICEFF.png" alt="Partenaire 1" class="mx-auto"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.who.int/fr"><img src="assets/img/OMSS.png" alt="Partenaire 2" class="mx-auto"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.theglobalfund.org/fr/"><img src="assets/img/fondmondial.png" alt="Partenaire 3" class="relative top-6"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.savethechildren.net/"><img src="assets/img/SAVEECHILDREN.png" alt="Partenaire 4" class="mx-auto"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.usaid.gov/fr/cote-divoire"><img src="assets/img/usaid.png" alt="Partenaire 5" class="mx-auto"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Section pour la map interactive -->
 <section id="carte" class="py-16 bg-gray-100">
@@ -432,7 +465,6 @@
         <div id="map" style="height: 300px; width: 100%;" class="sm:h-72 md:h-96 lg:h-[600px]"></div>
     </div>
 </section>
-
 
 <!-- Pied de page -->
 <footer id="footer" class="bg-black text-white py-8">

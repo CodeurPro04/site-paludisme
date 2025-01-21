@@ -97,9 +97,9 @@
 body.loaded .content {
   display: block;
 }
-/* Style de base de la carte */
+
 .card {
-  background-color: #1E40AF; /* Bleu */
+  background-color: #1E40AF; 
   padding: 24px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -141,8 +141,35 @@ body.loaded .content {
   width: 100%;
 }
 
-/* Effet hover de la carte */
+
 .card:hover {
-  transform: scale(1.05) translateY(-5px); /* Agrandit la carte et la soulève légèrement */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+  transform: scale(1.05) translateY(-5px); 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/* Nos partenaires style */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.swiper-slide img {
+  max-width: 300px; 
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+.swiper-slide img:hover {
+  transform: scale(1.1); 
+  opacity: 1;
 }
