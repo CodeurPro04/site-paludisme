@@ -159,6 +159,7 @@ body.loaded .content {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: slider-wrapper 12s infinite ease-in-out;
 }
 
 .swiper-slide img {
@@ -169,7 +170,128 @@ body.loaded .content {
 }
 
 
-.swiper-slide img:hover {
-  transform: scale(1.1); 
-  opacity: 1;
+
+@keyframes slider-wrapper {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-100%);
+  }
+  50%,
+  70% {
+    transform: translateX(-200%);
+  }
+  75%,
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+} 
+
+
+html,body~{
+  overflow: auto; 
+}
+.p1{ 
+  margin-left: 20px;
+  margin-right: 200;
+ display:flex;
+ flex-direction: center;
+ flex-wrap: wrap;
+ align-items: center;
+ overflow: auto;
+
+}
+.im1{
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+ overflow: auto;
+ justify-content: center;
+}
+
+.prix{ 
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 150px;
+  margin-left: 100px;
+  overflow: auto;
+ 
+}
+.modalite{
+  margin-top: 0px;
+  margin-left: 120px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center; 
+ overflow: auto;
+
+}
+
+.im2{
+  margin-left: 50px;
+  margin-right: 120px;
+  border-radius: 15px;
+  position: relative;
+  left: 50px;
+ overflow: auto;
+
+}
+.btn-don{
+  margin-bottom: 150px;
+  bottom: 100px;
+ overflow: auto;
+
+}
+
+.img-hover{
+  position: absolute;
+  right: 65%;
+  top: 10%;
+  left: 150px;
+ overflow: auto;
+
+}
+
+.prix1{
+  
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+ overflow: auto;
+
+}
+
+.prix2{
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+ overflow: auto;
+
+
+}
+.prix3{
+  gap: 50px;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+ overflow: auto;
+
+
 }

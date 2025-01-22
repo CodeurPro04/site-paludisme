@@ -21,65 +21,95 @@
 		<!-- Bibliothèque pour effet animation -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(); // Initialisation de la bibliothèque AOS
-    </script>
-</head>
-<body class="bg-gray-100">
-    <!-- Barre de navigation -->
-    <header class="bg-white shadow-md fixed top-0 w-full z-10" >
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-3">
-                <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
+    
+        <link rel="stylesheet" href="style/style.css">
+        <title>don</title>
+        
+    </head>
+    <body class="bg-white shadow-md  top-0 w-full z-10 " data-aos="fade-down" data-aos-duration="1000">
+        
+        <!-- Barre de navigation -->
+        <script>  AOS.init() </script>
+        <header class="bg-white shadow-md fixed top-0 w-full z-10" data-aos="fade-down" data-aos-duration="1000">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
+                </div>
+                <nav class="space-x-6">
+                    <a href="index.html" id="nav-accueil" class="nav-item relative  text-blue-600 hover:text-blue-600 transition duration-800 group active">
+                        <i class="fa-solid fa-house"></i> Accueil
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#symptomes" id="nav-symptomes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-virus"></i> Symptômes
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#causes" id="nav-causes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-ribbon"></i> Causes
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#prevention" id="nav-prevention" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-heart"></i> Prévention
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#contact" id="nav-contact" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-phone"></i> Contact
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#carte" id="nav-carte" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-map"></i> Carte
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                    <a href="index.html#teams" id="nav-teams" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                        <i class="fa-solid fa-people-group"></i> Teams
+                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                    </a>
+                </nav>
+                <a href="don.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700"><i class="fa-solid fa-hand-holding-medical"></i> Faire un don</a>
             </div>
-            <nav class="space-x-6">
-                <a href="index.html" id="nav-accueil" class="relative hover:text-blue-600 transition duration-800 group active text-blue-600">
-                    <i class="fa-solid fa-house"></i> Accueil
-                </a>
-                <a href="#index#symptomes" id="nav-symptomes" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
-                    <i class="fa-solid fa-virus"></i> Symptômes
-                </a>
-                <a href="#causes" id="nav-causes" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
-                    <i class="fa-solid fa-ribbon"></i> Causes
-                </a>
-                <a href="#prevention" id="nav-prevention" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
-                    <i class="fa-solid fa-heart"></i> Prévention
-                </a>
-                <a href="#contact" id="nav-contact" class="relative text-gray-600 hover:text-blue-600 transition duration-800 group">
-                    <i class="fa-solid fa-phone"></i> Contact
-                </a>
-            </nav>
-            <a href="#donate" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700">Faire un don</a>
-        </div>
-    </header>
+        </header>
+    <body> 
+    
+      <section >
 
-    <!-- Section Faire un Don -->
-    <section id="donate" class="mt-20 py-16 bg-gray-400 text-white" >
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-6">Contribuez à Notre Cause</h1>
-            <p class="text-lg mb-10">Votre soutien peut faire une réelle différence dans la vie de nombreuses personnes. Merci pour votre générosité.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-4">Don Unique</h2>
-                    <p class="mb-6">Faites un don ponctuel et aidez-nous à atteindre nos objectifs.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">Faire un don</button>
-                </div>
-
-                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-4">Don Mensuel</h2>
-                    <p class="mb-6">Soutenez-nous régulièrement avec un don mensuel.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">S'abonner</button>
-                </div>
-
-                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
-                    <h2 class="text-2xl font-bold mb-4">Don Personnalisé</h2>
-                    <p class="mb-6">Choisissez le montant et la fréquence de votre soutien.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500">Personnaliser</button>
+          <div class="p1" data-aos="fade-up" data-aos-duration="1000">
+              <div class="im1" >
+                  <!--main page-->
+                  
+                  <img class="im2"  data-aos="fade-up" data-aos-duration="1000" src= "assets/img/enfant.jpg" alt="enfant atteint du paludisme ">
+                  <p class="img-hover text-4xl font-bold text-gray-700 leading-snug" >Chaque francs investi dans les services liés au Paludisme eloigne d'innocente personnes de la mort.
+                      <br> Votre contribution fera la différence.</p>
+                      <d class="prix">
+                          <div class="prix1">
+                              <p  class="  text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 500 FRANCS </span>  <br> Est le prix de la goûte épaisse permettant de connaitre l'etat d'une personne</p>
+                            </div> 
+                            <div class="prix2">
+                                <p class="text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 3125 FRANCS</span> <br> Est le prix d'une boîte de comprimé antipaludique pour adulte</p>
+                            </div>
+                            <div class="prix3">  
+                                <p class="  text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 1715 FRANCS</span> <br> Est le prix d'une boîte de comprimé antipaludique pour enfant</p>
+                            </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="modalite" >
+                <h1 class="text-4xl font-bold text-gray-800 leading-snug" > Devenir donateur </h1> 
+                
+                <p > Devenir donnateur c'est dire oui a la proposition de don en especes propose <br>
+                    permettant d'aideé des hommes ,femmes, et enfants atteint du paludisme  et ne pouvant pas se <br>
+                    procurer de traitement dans le monde </p> 
+                    
+                    <div class="btn-don"   data-aos="fade-up" data-aos-duration="1000">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 2000</button>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 5000</button>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 10000</button>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> Personnalisé</button>
+                    </div>
+                    
+                </div>
+            </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
