@@ -9,10 +9,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon -->
         <link rel="icon" href="assets/img/favicon.png">
-		<!-- Lien style du Framework css Tailwind -->
+		<!-- Lien style du Framework Tailwind et style du css -->
 		<link href="src/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        *
+        
 		<!-- Font Awesome Pour Les Icons -->
         <script src="https://kit.fontawesome.com/35c044877d.js" crossorigin="anonymous"></script>
 		<!-- Bibliothèque pour la carte interactive -->
@@ -21,101 +25,170 @@
 		<!-- Bibliothèque pour effet animation -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="style/style.css">
-        <title>don</title>
-        
-    </head>
-    <body class="bg-white shadow-md  top-0 w-full z-10 " data-aos="fade-down" data-aos-duration="1000">
-        
-        <!-- Barre de navigation -->
-        <script>  AOS.init() </script>
-        <header class="bg-white shadow-md fixed top-0 w-full z-10" data-aos="fade-down" data-aos-duration="1000">
-            <div class="container mx-auto flex justify-between items-center py-4 px-6">
-                <div class="flex items-center space-x-3">
-                    <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
-                </div>
-                <nav class="space-x-6">
-                    <a href="index.html" id="nav-accueil" class="nav-item relative  text-blue-600 hover:text-blue-600 transition duration-800 group active">
-                        <i class="fa-solid fa-house"></i> Accueil
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#symptomes" id="nav-symptomes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-virus"></i> Symptômes
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#causes" id="nav-causes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-ribbon"></i> Causes
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#prevention" id="nav-prevention" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-heart"></i> Prévention
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#contact" id="nav-contact" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-phone"></i> Contact
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#carte" id="nav-carte" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-map"></i> Carte
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                    <a href="index.html#teams" id="nav-teams" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
-                        <i class="fa-solid fa-people-group"></i> Teams
-                        <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
-                    </a>
-                </nav>
-                <a href="don.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700"><i class="fa-solid fa-hand-holding-medical"></i> Faire un don</a>
+        <title>Medi-Plus | Faire Un DON</title>
+</head>
+<body class="bg-gray-50 font-roboto">
+    <!-- Barre de navigation -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-10" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
             </div>
-        </header>
-    <body> 
-    
-      <section >
-
-          <div class="p1" data-aos="fade-up" data-aos-duration="1000">
-              <div class="im1" >
-                  <!--main page-->
-                  
-                  <img class="im2"  data-aos="fade-up" data-aos-duration="1000" src= "assets/img/enfant.jpg" alt="enfant atteint du paludisme ">
-                  <p class="img-hover text-4xl font-bold text-gray-700 leading-snug" >Chaque francs investi dans les services liés au Paludisme eloigne d'innocente personnes de la mort.
-                      <br> Votre contribution fera la différence.</p>
-                      <d class="prix">
-                          <div class="prix1">
-                              <p  class="  text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 500 FRANCS </span>  <br> Est le prix de la goûte épaisse permettant de connaitre l'etat d'une personne</p>
-                            </div> 
-                            <div class="prix2">
-                                <p class="text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 3125 FRANCS</span> <br> Est le prix d'une boîte de comprimé antipaludique pour adulte</p>
-                            </div>
-                            <div class="prix3">  
-                                <p class="  text-2xl font-bold text-gray-800 leading-snug"> <span class="text-3xl font-bold text-blue-600"> 1715 FRANCS</span> <br> Est le prix d'une boîte de comprimé antipaludique pour enfant</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="modalite" >
-                <h1 class="text-4xl font-bold text-gray-800 leading-snug" > Devenir donateur </h1> 
-                
-                <p > Devenir donnateur c'est dire oui a la proposition de don en especes propose <br>
-                    permettant d'aideé des hommes ,femmes, et enfants atteint du paludisme  et ne pouvant pas se <br>
-                    procurer de traitement dans le monde </p> 
-                    
-                    <div class="btn-don"   data-aos="fade-up" data-aos-duration="1000">
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 2000</button>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 5000</button>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> 10000</button>
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-black transition duration-500"> Personnalisé</button>
-                    </div>
-                    
-                </div>
-            </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 Votre Organisation. Tous droits réservés.</p>
+            <nav class="space-x-6">
+                <a href="index.html" id="nav-accueil" class="nav-item relative  text-blue-600 hover:text-blue-600 transition duration-800 group active">
+                    <i class="fa-solid fa-house"></i> Accueil
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#symptomes" id="nav-symptomes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-virus"></i> Symptômes
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#causes" id="nav-causes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-ribbon"></i> Causes
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#prevention" id="nav-prevention" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-heart"></i> Prévention
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#contact" id="nav-contact" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-phone"></i> Contact
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#teams" id="nav-teams" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-people-group"></i> Teams
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#carte" id="nav-carte" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-map"></i> Carte
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+            </nav>
+            <a href="don.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700"><i class="fa-solid fa-hand-holding-medical"></i> Faire un Don</a>
         </div>
-    </footer>
+    </header>
+
+    <!-- Section principale -->
+    <main class="pt-20">
+        <!-- Bannière -->
+        <section class="bg-blue-100 py-16">
+            <div class="container mx-auto text-center">
+                <h1 class="text-3xl font-bold text-blue-800 text-center mb-6">Aidez à Sauver des Vies</h1>
+                <p class="text-xl text-gray-700 mt-4">
+                    Chaque franc investi permet de rapprocher une personne innocente de la guérison.
+                </p>
+                <img src="assets/img/enfant.jpg" alt="Enfant atteint de paludisme" class="mx-auto mt-8 rounded-lg shadow-lg">
+            </div>
+        </section>
+
+        <section class="donation-section">
+            <div class="container" >
+                <div class="section-title text-3xl font-bold text-blue-800 text-center mb-6" data-aos="fade-up" data-aos-duration="1000">
+                    <h2>Soutenez la Lutte Contre le Paludisme</h2>
+                    <img src="assets/img/section-img.png" alt="" class="mx-auto" >
+                    <p>Chaque contribution compte pour sauver des vies et combattre le paludisme dans les communautés touchées.</p>
+                </div>
+                <div class="donation-cards" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Card 1 -->
+                    <div class="donation-card">
+                        <div class="card-header">
+                            <i class="icon">💊</i>
+                            <h3>Fournir des Médicaments</h3>
+                            <p class="price">6 500 FCFA <span>/ par trousse</span></p>
+                        </div>
+                        <ul class="card-features">
+                            <li>Une trousse pour un patient <i class="fa fa-check"></i></li>
+                            <li>Livraison aux zones rurales <i class="fa fa-check"></i></li>
+                            <li>Assistance médicale immédiate <i class="fa fa-check"></i></li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Faire un Don</a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="donation-card">
+                        <div class="card-header">
+                            <i class="icon">🦟</i>
+                            <h3>Fournir des Moustiquaires</h3>
+                            <p class="price">16 500 FCFA <span>/ par moustiquaire</span></p>
+                        </div>
+                        <ul class="card-features">
+                            <li>Moustiquaire imprégnée d'insecticide <i class="fa fa-check"></i></li>
+                            <li>Protection contre les piqûres <i class="fa fa-check"></i></li>
+                            <li>Durée de vie : 3 ans <i class="fa fa-check"></i></li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Faire un Don</a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="donation-card">
+                        <div class="card-header">
+                            <i class="icon">🏥</i>
+                            <h3>Soutenir les Cliniques</h3>
+                            <p class="price">32 500 FCFA <span>/ par intervention</span></p>
+                        </div>
+                        <ul class="card-features">
+                            <li>Diagnostic et traitement <i class="fa fa-check"></i></li>
+                            <li>Formation des soignants locaux <i class="fa fa-check"></i></li>
+                            <li>Éducation sur la prévention <i class="fa fa-check"></i></li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Faire un Don</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+<footer id="footer" class="bg-black text-white py-8">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+
+            <!-- Section Coordonnées -->
+            <div class="w-full md:w-1/3 mb-8">
+                <h3 class="text-xl font-semibold mb-4">Nos coordonnées</h3>
+                <p class="mb-2"><strong><i class="fa fa-map-marker"></i> Adresse:</strong> Cocody Riviera Palmeraie <br> près de la cité SYNINFO, Côte d'Ivoire</p>
+                <p class="mb-2"><strong><i class="fa fa-phone"></i> Téléphone:</strong> 27 22 47 02 12</p>
+                <p><strong><i class="fa fa-envelope"></i> Email:</strong> pnlp_rci@yahoo.fr</p>
+            </div>
+
+            <!-- Section Liens utiles -->
+            <div class="w-full md:w-1/3 mb-8">
+                <h3 class="text-xl font-semibold mb-4">Liens utiles</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html#" class="hover:text-blue-400 transition-colors">Accueil</a></li>
+                    <li><a href="index.html#symptomes" class="hover:text-blue-400 transition-colors">Symptôme</a></li>
+                    <li><a href="index.html#causes" class="hover:text-blue-400 transition-colors">Causes</a></li>
+                    <li><a href="index.html#prevention" class="hover:text-blue-400 transition-colors">Préventions</a></li>
+                    <li><a href="index.html#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                    <li><a href="index.html#carte" class="hover:text-blue-400 transition-colors">Carte</a></li>
+                </ul>
+            </div>
+
+            <!-- Section Localisation -->
+            <div class="w-full md:w-1/3 mb-8">
+                <h3 class="text-xl font-semibold mb-4">Localisation</h3>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1147.351674940148!2d-3.9635128730051115!3d5.371251138090875!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc377f22ff357f9e!2sPNLP%20CI!5e0!3m2!1sfr!2sci!4v1582565180402!5m2!1sfr!2sci" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Section Copyright -->
+        <div class="text-center mt-8 border-t border-gray-700 pt-6">
+            <p>&copy; 2025 MediPlus CI. | Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
 </body>
+    <script src="bibliotheque/style.js"></script>
 </html>

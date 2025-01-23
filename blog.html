@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon -->
+        <link rel="icon" href="assets/img/favicon.png">
+		<!-- Lien style du Framework Tailwind et style du css -->
+		<link href="src/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
+		<!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<!-- Font Awesome Pour Les Icons -->
+        <script src="https://kit.fontawesome.com/35c044877d.js" crossorigin="anonymous"></script>
+		<!-- Bibliothèque pour la carte interactive -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		<!-- Bibliothèque pour effet animation -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+        <title>Medi-Plus | Blog</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-10" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <a href="index.html"><img src="assets/logo/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="space-x-6">
+                <a href="index.html" id="nav-accueil" class="nav-item relative  text-blue-600 hover:text-blue-600 transition duration-800 group active">
+                    <i class="fa-solid fa-house"></i> Accueil
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#symptomes" id="nav-symptomes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-virus"></i> Symptômes
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#causes" id="nav-causes" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-ribbon"></i> Causes
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#prevention" id="nav-prevention" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-heart"></i> Prévention
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#contact" id="nav-contact" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-phone"></i> Contact
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#teams" id="nav-teams" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-people-group"></i> Teams
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#carte" id="nav-carte" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-solid fa-map"></i> Carte
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+                <a href="blog.html" id="nav-blog" class="nav-item relative text-black hover:text-blue-600 transition duration-800 group">
+                    <i class="fa-brands fa-blogger-b"></i> Blog
+                    <span class="absolute left-0 bottom-[-4px] w-0 h-0.5 bg-blue-600 transition-all duration-700 group-hover:w-full"></span>
+                </a>
+            </nav>
+            <a href="don.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-black transition duration-700"><i class="fa-solid fa-hand-holding-medical"></i> Faire un Don</a>
+        </div>
+    </header>
+    <section class="blog-section relative bg-white pt-28">
+        <div class="container">
+            <div class="section-title">
+                <h2>Actualités et Luttes Contre le Paludisme</h2>
+                <p>Découvrez les dernières nouvelles, événements et initiatives pour vaincre le paludisme.</p>
+            </div>
+            <div class="blog-posts">
+                <!-- Article 1 -->
+                <div class="blog-post">
+                    <div class="post-image">
+                        <img src="assets/img/MEDIA_176.jpeg" alt="Atelier bilan 2024 du PNLP">
+                    </div>
+                    <div class="post-content">
+                        <h3>Atelier bilan 2024 du PNLP : Des experts réunis à Jacqueville</h3>
+                        <p>Jacqueville accueille en ce moment même l'atelier bilan 2024 du Programme National de Lutte contre...</p>
+                        <div class="post-meta">
+                            <span><i class="fa fa-user"></i> Mambo Abbe</span>
+                            <span><i class="fa fa-folder"></i> Bilan</span>
+                            <span><i class="fa fa-calendar"></i> 21/01/2025</span>
+                        </div>
+                        <a href="#" class="btn btn-read-more">Lire plus</a>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="blog-post">
+                    <div class="post-image">
+                        <img src="assets/img/MEDIA_175.jpeg" alt="Formation en leadership">
+                    </div>
+                    <div class="post-content">
+                        <h3>35 cadres de la santé formés en leadership et gouvernance</h3>
+                        <p>35 leaders de la santé prêts à transformer les systèmes de santé en Côte d'Ivoire.</p>
+                        <div class="post-meta">
+                            <span><i class="fa fa-folder"></i> Renforcement des capacités</span>
+                            <span><i class="fa fa-calendar"></i> 01/12/2024</span>
+                        </div>
+                        <a href="#" class="btn btn-read-more">Lire plus</a>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="blog-post">
+                    <div class="post-image">
+                        <img src="assets/img/MEDIA_174.jpg" alt="Bilan du premier semestre">
+                    </div>
+                    <div class="post-content">
+                        <h3>Bilan du premier semestre 2024</h3>
+                        <p>Bilan encourageant de la lutte contre le paludisme en Côte d'Ivoire : les révélations de...</p>
+                        <div class="post-meta">
+                            <span><i class="fa fa-user"></i> Mambo Abbe</span>
+                            <span><i class="fa fa-folder"></i> Bilan</span>
+                            <span><i class="fa fa-calendar"></i> 14/08/2024</span>
+                        </div>
+                        <a href="#" class="btn btn-read-more">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script src="bibliotheque/style.js"></script>
+</html>
